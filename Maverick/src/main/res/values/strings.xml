@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Maverick</string>
+    <string name="action_settings">Settings Menu</string>
+    <string name="action_Export">Export</string>
+    <string name="ConfigAlertDialogOK">Save</string>
+    <string name="ConfigAlertDialogCancel">Cancel</string>
+    <string name="title_activity_config">ConfigActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="derPassword">8675309</string>
+    <string name="ConfigDialogTitle">Settings</string>
+    <string name="CloseButton">Save &amp; Close</string>
+    <string name="InitialURL">www.InitialURL.com</string>
+    <string name="WebServiceURL">www.WebServiceURL.com</string>
+
+    <string-array name="stateAbbreviationList">
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DC</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>IA</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>MA</item>
+        <item>MD</item>
+        <item>ME</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MO</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>NE</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NV</item>
+        <item>NY</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VA</item>
+        <item>VT</item>
+        <item>WA</item>
+        <item>WI</item>
+        <item>WV</item>
+        <item>WY</item>
+    </string-array>
+
+    <string-array name="contactMethods">
+        <item>Home Phone</item>
+        <item>Cell Phone</item>
+        <item>Other Phone</item>
+        <item>Email</item>
+        <item>Email 2</item>
+        <item>Email 3</item>
+    </string-array>
+
+</resources>
