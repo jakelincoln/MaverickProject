@@ -150,6 +150,18 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         db.close();
     }
 
+    public void markAsSubmitted(ArrayList<Integer> batches){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(ANDROID_SUBMITTED,1);
+
+        for (Integer iterator : batches){
+            db.update(ANDROID_TABLE_APPLICANTS,values,ANDROID_BATCHID + " = ?",new String[] {Integer.toString(iterator)});
+        }
+        db.close();
+    }
+
     public ArrayList<Integer> getUnsubmittedBatches(){
         ArrayList<Integer> batches = new ArrayList<Integer>();
 

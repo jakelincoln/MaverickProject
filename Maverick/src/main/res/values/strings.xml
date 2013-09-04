@@ -15,6 +15,7 @@
     <string name="WebServiceURL">www.WebServiceURL.com</string>
 
     <string-array name="stateAbbreviationList">
+        <item> </item>
         <item>AL</item>
         <item>AK</item>
         <item>AZ</item>
@@ -69,6 +70,7 @@
     </string-array>
 
     <string-array name="contactMethods">
+        <item> </item>
         <item>Home Phone</item>
         <item>Cell Phone</item>
         <item>Other Phone</item>

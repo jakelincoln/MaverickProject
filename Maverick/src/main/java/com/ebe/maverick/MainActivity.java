@@ -12,6 +12,8 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.provider.Settings;
+import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -27,7 +29,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.provider.Settings.Secure;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -56,10 +58,14 @@ public class MainActivity extends Activity {
     EditText Email2;
     EditText Email3;
     EditText Fax;
+    private String androidID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //display the view
+        setContentView(R.layout.activity_main);
 
         //setup and link to all controls on page
         Save = (Button)findViewById(R.id.Save);
@@ -82,6 +88,10 @@ public class MainActivity extends Activity {
         Fax = (EditText)findViewById(R.id.FaxText);
         db = new DatabaseHandler(this);
 
+
+
+
+
         //setup drop downs
         ArrayAdapter<CharSequence> stateAdapter = ArrayAdapter.createFromResource(this,
                 R.array.stateAbbreviationList, android.R.layout.simple_spinner_item);
@@ -96,16 +106,14 @@ public class MainActivity extends Activity {
 
 
         //JSON Receive Initial
-        if(isConnected()){
+        if(isConnected("@string/InitialURL")){
             //receive JSON
 
         }
 
-        //display the view
-        setContentView(R.layout.activity_main);
 
 
-
+        //Save Button Click
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,8 +153,7 @@ public class MainActivity extends Activity {
         return true;
     }
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId())
         {
@@ -159,8 +166,7 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    void showConfigDialog()
-    {
+    void showConfigDialog() {
         FragmentManager fm = getFragmentManager();
         ConfigDialogFragment test = new ConfigDialogFragment();
         test.setRetainInstance(true);
@@ -169,7 +175,7 @@ public class MainActivity extends Activity {
 
     void showSaveDialog(){
 
-        String saveLocation = "";
+        String saveLocation;
         try{
             saveLocation = getDataDir();
         }
@@ -179,8 +185,156 @@ public class MainActivity extends Activity {
         showToast(saveLocation);
     }
 
-    public class ConfigDialogFragment extends DialogFragment
-    {
+    public void showToast(String message){
+        Toast toast = Toast.makeText(getApplicationContext(),message, Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    public String getDataDir() throws Exception{
+        return getApplicationContext().getPackageManager().getPackageInfo(getPackageName(), 0).applicationInfo.dataDir;
+    }
+
+    public boolean isConnected(String WebAddress){
+        try{
+            ConnectivityManager cm = (ConnectivityManager) getSystemService
+                    (Context.CONNECTIVITY_SERVICE);
+            NetworkInfo netInfo = cm.getActiveNetworkInfo();
+
+            if (netInfo != null && netInfo.isConnected())
+            {
+                //Network is available but check if we can get access from the network.
+                URL url = new URL(WebAddress);
+                HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
+                urlc.setRequestProperty("Connection", "close");
+                urlc.setConnectTimeout(2000); // Timeout 2 seconds.
+                urlc.connect();
+
+                if (urlc.getResponseCode() == 200)  //Successful response.
+                {
+                    return true;
+                }
+                else
+                {
+                    Log.d("NO INTERNET", "NO INTERNET");
+                    return false;
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+        return false;
+    }
+
+    public boolean validateFields(){
+        if(LastName.getText().toString() != ""){
+            if(FirstName.getText().toString() != ""){
+                if(SocialSecurityNumber.getText().length() == 11){
+                    if(DoB.getText().length() == 10){
+                        if(Address.getText().length() >= 5){
+                            if(City.getText().toString() != ""){
+                                if(State.getSelectedItemPosition() != 0){
+                                    if(Zip.getText().length() == 5){
+                                        if(HomePhone.getText().length() ==12 ||
+                                                CellPhone.getText().length() == 12 ||
+                                                OtherPhone.getText().length() == 12){
+                                            if(Email1.getText().toString().equals("") ||
+                                                    (Email1.getText().toString().contains("@") &&
+                                                    Email1.getText().toString().contains("."))){
+                                                if(Email2.getText().toString().equals("") ||
+                                                        (Email2.getText().toString().contains("@") &&
+                                                        Email2.getText().toString().contains("."))){
+                                                    if(Email3.getText().toString().equals("") ||
+                                                            (Email3.getText().toString().contains("@") &&
+                                                            Email3.getText().toString().contains("."))){
+                                                        if(Fax.getText().length() == 0 ||
+                                                                Fax.getText().length() ==14){
+                                                            if(validateContactMethod(ContactMethod.getSelectedItemPosition())){
+                                                                return true;
+                                                            }else showToast("Please Select a Valid Contact Method");
+                                                        }else showToast("Please Enter a Valid Fax");
+                                                    }else showToast("Please Enter a Valid Email in Email 3");
+                                                }else showToast("Please Enter a Valid Email  in Email 2");
+                                            }else showToast("Please Enter a Valid Email in Email");
+                                        }else showToast("Please Enter a Valid Phone Number");
+                                    }else showToast("Please Enter a Valid Zip");
+                                }else showToast("Please Select a State");
+                            }else showToast("Please Enter a Valid City");
+                        }else showToast("Please Enter a Valid Address");
+                    }else showToast("Please Enter a Valid Date of Birth");
+                }else showToast("Please Enter a Valid Social Security Number");
+            }else showToast("First Name Must Not be Blank");
+        }else showToast("Last Name Must Not be Blank");
+        return false;
+    }
+
+    public boolean validateContactMethod(int position){
+        switch (position)
+        {
+            case 0: return false;
+            case 1:
+                if(HomePhone.getText().length() == 12) return true;
+                else return false;
+            case 2:
+                if(CellPhone.getText().length() == 12) return true;
+                else return false;
+            case 3:
+                if(OtherPhone.getText().length() == 12) return true;
+                else return false;
+            case 4:
+                if(Email1.getText().toString() == "" ||
+                        (Email1.getText().toString().contains("@") &&
+                                Email1.getText().toString().contains("."))) return true;
+                else return false;
+            case 5:
+                if(Email2.getText().toString() == "" ||
+                        (Email2.getText().toString().contains("@") &&
+                                Email2.getText().toString().contains("."))) return true;
+                else return false;
+            case 6:
+                if(Email3.getText().toString() == "" ||
+                        (Email3.getText().toString().contains("@") &&
+                                Email3.getText().toString().contains("."))) return true;
+                else return false;
+            default: return false;
+        }
+    }
+
+    public shortformSend getFullPacket(String androidMachineID) {
+        shortformSend fullPacket = new shortformSend(androidMachineID);
+
+        try{
+            //assigns the next available batch number to all unassigned applicants
+            if(db.assignBatchNum()){
+
+                //get list of unsubmitted batches
+                ArrayList<Integer> unSubmitted = db.getUnsubmittedBatches();
+
+                //Doesn't do any send if no batches are available to send
+                    if(unSubmitted.size() >= 1){
+                        for(Integer iterator : unSubmitted){
+                            fullPacket.addBatch(db.getBatch(iterator));
+                        }
+                    }
+
+            }
+        }
+        //exception thrown if any errors occur
+        catch (Exception e){
+            showToast(e.toString());
+        }
+
+        return fullPacket;
+    }
+
+
+    /*Dialog Fragment Extension Class called ConfigDialogFragment
+    This is the interface and handler for the configuration menu
+    Which contains the administrative settings and the manual sync
+     */
+
+    public class ConfigDialogFragment extends DialogFragment {
 
         EditText adminPword;
         EditText URL;
@@ -237,19 +391,24 @@ public class MainActivity extends Activity {
             URL.setEnabled(false);
             Source.setEnabled(false);
 
+            //Save & Close button clicked
             closebtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if(enable){
+                        //if the values were changed the values are saved
                         editor.putString("URL",URL.getText().toString());
                         if(Source.getSelectedItemPosition() != 0){
                             editor.putString("Source",Source.getSelectedItem().toString());
                         }
+                        //commit the changes to persistent storage
                         editor.commit();
                     }
+                    //close the fragment
                     dismiss();
                 }
             });
+
             //Admin Login Button Click Method
             adminLoginBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -265,10 +424,14 @@ public class MainActivity extends Activity {
                 }
             });
 
+            //Sync Button Clicked
             Sync.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Synch With Server Code Here!
+                    //Set the Machine Id
+                    androidID = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                            Settings.Secure.ANDROID_ID);
+
                 }
             });
 
@@ -310,127 +473,10 @@ public class MainActivity extends Activity {
             String password = getResources().getString(R.string.derPassword);
             if(text.equals(password))
                 return true;
-            //If the password is incorrect or on program start up the form is not editable
+                //If the password is incorrect or on program start up the form is not editable
             else
                 return false;
         }
     }
-
-    public void showToast(String message){
-        Toast toast = Toast.makeText(getApplicationContext(),message, Toast.LENGTH_LONG);
-        toast.show();
-    }
-
-    public String getDataDir() throws Exception{
-        return getApplicationContext().getPackageManager().getPackageInfo(getPackageName(), 0).applicationInfo.dataDir;
-    }
-
-    public boolean isConnected(){
-        try{
-            ConnectivityManager cm = (ConnectivityManager) getSystemService
-                    (Context.CONNECTIVITY_SERVICE);
-            NetworkInfo netInfo = cm.getActiveNetworkInfo();
-
-            if (netInfo != null && netInfo.isConnected())
-            {
-                //Network is available but check if we can get access from the network.
-                URL url = new URL("@string/InitialURL");
-                HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
-                urlc.setRequestProperty("Connection", "close");
-                urlc.setConnectTimeout(2000); // Timeout 2 seconds.
-                urlc.connect();
-
-                if (urlc.getResponseCode() == 200)  //Successful response.
-                {
-                    return true;
-                }
-                else
-                {
-                    Log.d("NO INTERNET", "NO INTERNET");
-                    return false;
-                }
-            }
-        }
-        catch(Exception e)
-        {
-            return false;
-        }
-        return false;
-    }
-
-    public boolean validateFields(){
-        if(LastName.getText().toString() != ""){
-            if(FirstName.getText().toString() != ""){
-                if(SocialSecurityNumber.getText().length() == 11){
-                    if(DoB.getText().length() == 10){
-                        if(Address.getText().length() >= 5){
-                            if(City.getText().toString() != ""){
-                                if(State.getSelectedItemPosition() != 0){
-                                    if(Zip.getText().length() == 5){
-                                        if(HomePhone.getText().length() ==14 ||
-                                                CellPhone.getText().length() == 14 ||
-                                                OtherPhone.getText().length() == 14){
-                                            if(Email1.getText().toString() == "" ||
-                                                    (Email1.getText().toString().contains("@") &&
-                                                    Email1.getText().toString().contains("."))){
-                                                if(Email2.getText().toString() == "" ||
-                                                        (Email2.getText().toString().contains("@") &&
-                                                        Email2.getText().toString().contains("."))){
-                                                    if(Email3.getText().toString() == "" ||
-                                                            (Email3.getText().toString().contains("@") &&
-                                                            Email3.getText().toString().contains("."))){
-                                                        if(Fax.getText().length() == 0 ||
-                                                                Fax.getText().length() ==14){
-                                                            if(validateContactMethod(ContactMethod.getSelectedItemPosition())){
-                                                                return true;
-                                                            }else showToast("Please Select a Valid Contact Method");
-                                                        }else showToast("Please Enter a Valid Fax");
-                                                    }else showToast("Please Enter a Valid Email in Email 3");
-                                                }else showToast("Please Enter a Valid Email  in Email 2");
-                                            }else showToast("Please Enter a Valid Email in Email");
-                                        }else showToast("Please Enter a Valid Phone Number");
-                                    }else showToast("Please Enter a Valid Zip");
-                                }else showToast("Please Select a State");
-                            }else showToast("Please Enter a Valid City");
-                        }else showToast("Please Enter a Valid Address");
-                    }else showToast("Please Enter a Valid Date of Birth");
-                }else showToast("Please Enter a Valid Social Security Number");
-            }else showToast("First Name Must Not be Blank");
-        }else showToast("Last Name Must Not be Blank");
-        return false;
-    }
-
-    public boolean validateContactMethod(int position){
-        switch (position)
-        {
-            case 0: return false;
-            case 1:
-                if(HomePhone.getText().length() == 14) return true;
-                else return false;
-            case 2:
-                if(CellPhone.getText().length() == 14) return true;
-                else return false;
-            case 3:
-                if(OtherPhone.getText().length() == 14) return true;
-                else return false;
-            case 4:
-                if(Email1.getText().toString() == "" ||
-                        (Email1.getText().toString().contains("@") &&
-                                Email1.getText().toString().contains("."))) return true;
-                else return false;
-            case 5:
-                if(Email2.getText().toString() == "" ||
-                        (Email2.getText().toString().contains("@") &&
-                                Email2.getText().toString().contains("."))) return true;
-                else return false;
-            case 6:
-                if(Email3.getText().toString() == "" ||
-                        (Email3.getText().toString().contains("@") &&
-                                Email3.getText().toString().contains("."))) return true;
-                else return false;
-            default: return false;
-        }
-    }
-
 
 }

@@ -25,7 +25,16 @@
     </layouts>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89e9124e-cf1d-4c00-aa84-0a20f449b981" name="Default" comment="" />
+    <list default="true" id="89e9124e-cf1d-4c00-aa84-0a20f449b981" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Projects\MaverickProject\MaverickProject\Maverick\src\main\java\com\ebe\maverick\ConfigFragment.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Maverick/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Maverick/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/DatabaseHandler.java" afterPath="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/DatabaseHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/MainActivity.java" afterPath="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Maverick/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/Maverick/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Maverick/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/Maverick/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Maverick.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,22 +57,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/MainActivity.java" line="61" class="com.ebe.maverick.MainActivity" package="com.ebe.maverick">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/MainActivity.java" line="85" class="com.ebe.maverick.MainActivity" package="com.ebe.maverick">
+      <breakpoint url="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/DatabaseHandler.java" line="71" class="com.ebe.maverick.DatabaseHandler" package="com.ebe.maverick">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -125,51 +119,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="0" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="7514">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/app/ActivityThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1955" column="0" selection-start="82105" selection-end="82105" vertical-scroll-proportion="0.0" vertical-offset="33218" max-vertical-offset="86921">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZygoteInit.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/com/android/internal/os/ZygoteInit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12410">
+            <state line="369" column="0" selection-start="15100" selection-end="15100" vertical-scroll-proportion="0.4311164" vertical-offset="3122" max-vertical-offset="5270">
               <folding>
-                <element signature="e#0#25702#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#showConfigDialog#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#showSaveDialog#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#showToast#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#getDataDir#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#isConnected#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#validateFields#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#validateContactMethod#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#getFullPacket#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#15150#15158#0" expanded="true" />
+                <element signature="e#15483#15491#0" expanded="true" />
+                <element signature="e#15605#15613#0" expanded="true" />
+                <element signature="e#17543#17878#0" expanded="true" />
+                <element signature="e#17863#17864#0" expanded="true" />
+                <element signature="e#17921#19329#0" expanded="true" />
+                <element signature="e#18097#18819#0" expanded="true" />
+                <element signature="e#18796#18797#0" expanded="true" />
+                <element signature="e#19314#19315#0" expanded="true" />
+                <element signature="method#AdminLogin#0;class#ConfigDialogFragment#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#19530#19576#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/values/styles.xml">
+      <file leaf-file-name="DatabaseHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/DatabaseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+            <state line="199" column="0" selection-start="8303" selection-end="8303" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="1088">
+              <folding>
+                <element signature="docComment;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#DatabaseHandler#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#onCreate#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#onUpgrade#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#addApplicant#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getBatch#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#markAsSubmitted#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#markAsSubmitted#1;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#getUnsubmittedBatches#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="e#7325#7334#0" expanded="true" />
+                <element signature="method#clearSubmitted#0;class#DatabaseHandler#0" expanded="false" />
+                <element signature="method#assignBatchNum#0;class#DatabaseHandler#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shortformSend.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/shortformSend.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="shortformSendBatch.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/shortformSendBatch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="278" column="53" selection-start="12801" selection-end="12801" vertical-scroll-proportion="0.0" vertical-offset="4419" max-vertical-offset="7888">
+            <state line="11" column="13" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -178,8 +194,11 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="47" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1462">
-              <folding />
+            <state line="71" column="0" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="459">
+              <folding>
+                <element signature="tag#string-array#0;tag#resources#0" expanded="false" />
+                <element signature="tag#string-array#1;tag#resources#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,6 +209,15 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="DONT" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="tasksExpandState">
@@ -234,7 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Maverick/build.gradle" />
         <option value="$PROJECT_DIR$/Maverick/src/main/java/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/shortformReturn.java" />
         <option value="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/ShortformPreSend.java" />
@@ -246,10 +273,11 @@
         <option value="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/InitDatabaseHandler.java" />
         <option value="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/initValues.java" />
         <option value="$PROJECT_DIR$/Maverick/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/PhoneTextWatcher.java" />
+        <option value="$PROJECT_DIR$/Maverick/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/Maverick/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/MainActivity.java" />
-        <option value="$PROJECT_DIR$/Maverick/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -278,7 +306,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -328,6 +356,98 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maverick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaverickProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maverick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maverick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaverickProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maverick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maverick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaverickProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maverick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maverick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaverickProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maverick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maverick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -339,9 +459,9 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="IntelliLang.Configuration" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/MaverickShortform" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="033c20c140c010d7" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -528,34 +648,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="-8" width="1296" height="1040" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1288" y="-8" width="1296" height="1040" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28286082" sideWeight="0.6022253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3977747" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32616082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3238958" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32775453" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.68758714" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20907618" sideWeight="0.6022253" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20907618" sideWeight="0.6738392" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31154382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.68758714" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28286082" sideWeight="0.6022253" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32684284" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -599,9 +719,75 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/app/Instrumentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1059" column="0" selection-start="40535" selection-end="40535" vertical-scroll-proportion="0.0" vertical-offset="17103" max-vertical-offset="29835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1936" column="0" selection-start="81151" selection-end="81151" vertical-scroll-proportion="0.0" vertical-offset="30839" max-vertical-offset="84915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/telephony/PhoneNumberFormattingTextWatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="30" selection-start="3165" selection-end="3165" vertical-scroll-proportion="0.33169532" vertical-offset="1191" max-vertical-offset="2703">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/telephony/PhoneNumberUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1262" column="21" selection-start="41480" selection-end="41480" vertical-scroll-proportion="1.918919" vertical-offset="19993" max-vertical-offset="42619">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1319" column="0" selection-start="51852" selection-end="51852" vertical-scroll-proportion="0.0" vertical-offset="20010" max-vertical-offset="152303">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/text/SpannableStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="862" column="0" selection-start="30432" selection-end="30432" vertical-scroll-proportion="0.0" vertical-offset="14179" max-vertical-offset="22202">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/widget/EditText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3514" column="0" selection-start="134756" selection-end="134756" vertical-scroll-proportion="0.33169532" vertical-offset="58022" max-vertical-offset="317934">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="56" selection-start="6049" selection-end="6049" vertical-scroll-proportion="0.86649215" vertical-offset="1811" max-vertical-offset="8041">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/shortformSendApplicant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="2329">
+        <state line="12" column="13" selection-start="222" selection-end="222" vertical-scroll-proportion="-0.54299754" vertical-offset="306" max-vertical-offset="2329">
           <folding>
             <element signature="docComment;class#shortformSendApplicant#0" expanded="false" />
             <element signature="method#shortformSendApplicant#0;class#shortformSendApplicant#0" expanded="false" />
@@ -649,81 +835,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/java/lang/Integer.java">
+    <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.33333334" vertical-offset="137" max-vertical-offset="12087">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/layout/activity_config.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="118" column="52" selection-start="4943" selection-end="4943" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2601">
-          <folding />
+        <state line="71" column="0" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="459">
+          <folding>
+            <element signature="tag#string-array#0;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#1;tag#resources#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/shortformSend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <folding>
-            <element signature="method#shortformSend#0;class#shortformSend#0" expanded="false" />
-            <element signature="method#shortformSend#1;class#shortformSend#0" expanded="false" />
-            <element signature="method#addBatch#0;class#shortformSend#0" expanded="false" />
-            <element signature="method#setMachineID#0;class#shortformSend#0" expanded="false" />
-            <element signature="method#getMachineID#0;class#shortformSend#0" expanded="false" />
-            <element signature="method#getBatchList#0;class#shortformSend#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/ShortformPreSend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Maverick/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="758" selection-end="758" vertical-scroll-proportion="0.8201754" vertical-offset="0" max-vertical-offset="731">
+        <state line="10" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="799">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/shortformSendBatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+        <state line="11" column="13" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="799">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/initValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="697">
-          <folding>
-            <element signature="docComment;class#initValues#0" expanded="false" />
-            <element signature="method#initValues#0;class#initValues#0" expanded="false" />
-            <element signature="method#initValues#1;class#initValues#0" expanded="false" />
-            <element signature="method#initValues#2;class#initValues#0" expanded="false" />
-            <element signature="method#initValues#3;class#initValues#0" expanded="false" />
-            <element signature="method#addSource#0;class#initValues#0" expanded="false" />
-            <element signature="method#getDefaultURL#0;class#initValues#0" expanded="false" />
-            <element signature="method#setDefaultURL#0;class#initValues#0" expanded="false" />
-            <element signature="method#getAutoSyncInterval#0;class#initValues#0" expanded="false" />
-            <element signature="method#setAutoSyncInterval#0;class#initValues#0" expanded="false" />
-            <element signature="method#getSourceList#0;class#initValues#0" expanded="false" />
-            <element signature="method#setSourceList#0;class#initValues#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/DatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="696" selection-end="3207" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1054">
+        <state line="199" column="0" selection-start="8303" selection-end="8303" vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1088">
           <folding>
             <element signature="docComment;class#DatabaseHandler#0" expanded="false" />
             <element signature="method#DatabaseHandler#0;class#DatabaseHandler#0" expanded="false" />
@@ -732,64 +870,41 @@
             <element signature="method#addApplicant#0;class#DatabaseHandler#0" expanded="false" />
             <element signature="method#getBatch#0;class#DatabaseHandler#0" expanded="false" />
             <element signature="method#markAsSubmitted#0;class#DatabaseHandler#0" expanded="false" />
+            <element signature="method#markAsSubmitted#1;class#DatabaseHandler#0" expanded="false" />
             <element signature="method#getUnsubmittedBatches#0;class#DatabaseHandler#0" expanded="false" />
-            <element signature="e#6911#6920#0" expanded="true" />
+            <element signature="e#7325#7334#0" expanded="true" />
             <element signature="method#clearSubmitted#0;class#DatabaseHandler#0" expanded="false" />
             <element signature="method#assignBatchNum#0;class#DatabaseHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/menu/menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="133" selection-end="133" vertical-scroll-proportion="0.04906205" vertical-offset="0" max-vertical-offset="693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="278" column="53" selection-start="12801" selection-end="12801" vertical-scroll-proportion="0.0" vertical-offset="4419" max-vertical-offset="7888">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Maverick/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="1462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Maverick/src/main/java/com/ebe/maverick/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="0" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.0" vertical-offset="817" max-vertical-offset="2397">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/app/ActivityThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1955" column="0" selection-start="82105" selection-end="82105" vertical-scroll-proportion="0.0" vertical-offset="31162" max-vertical-offset="84915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/com/android/internal/os/ZygoteInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12410">
+        <state line="369" column="0" selection-start="15100" selection-end="15100" vertical-scroll-proportion="0.4311164" vertical-offset="3122" max-vertical-offset="5270">
           <folding>
-            <element signature="e#0#25702#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#showConfigDialog#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#showSaveDialog#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#showToast#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getDataDir#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#isConnected#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#validateFields#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#validateContactMethod#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getFullPacket#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#15150#15158#0" expanded="true" />
+            <element signature="e#15483#15491#0" expanded="true" />
+            <element signature="e#15605#15613#0" expanded="true" />
+            <element signature="e#17543#17878#0" expanded="true" />
+            <element signature="e#17863#17864#0" expanded="true" />
+            <element signature="e#17921#19329#0" expanded="true" />
+            <element signature="e#18097#18819#0" expanded="true" />
+            <element signature="e#18796#18797#0" expanded="true" />
+            <element signature="e#19314#19315#0" expanded="true" />
+            <element signature="method#AdminLogin#0;class#ConfigDialogFragment#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#19530#19576#0" expanded="true" />
           </folding>
         </state>
       </provider>

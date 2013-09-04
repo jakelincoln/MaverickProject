@@ -121,6 +121,8 @@
                     android:layout_alignBottom="@+id/SSNLabel"
                     android:textColorHint="#000"
                     android:textColor="#000"
+                    android:hint="XXX-XX-XXXX"
+                    android:inputType="textPhonetic"
                     android:nextFocusDown="@+id/DOBText"
                     android:background="@drawable/field"
                     android:maxLength="11"
@@ -148,6 +150,7 @@
                     android:layout_marginLeft="60dip"
                     android:textColorHint="#000"
                     android:textColor="#000"
+                    android:hint="MM/DD/YYYY"
                     android:nextFocusDown="@+id/AddressText"
                     android:background="@drawable/field"
                     android:maxLength="10"
@@ -211,6 +214,7 @@
                     android:textColor="#000"
                     android:nextFocusDown="@+id/ZipCodeText"
                     android:background="@drawable/field"
+                    android:gravity="center"
                     >
             </EditText>
             <TextView
@@ -252,6 +256,7 @@
                     android:nextFocusDown="@+id/PhoneText"
                     android:background="@drawable/field"
                     android:maxLength="5"
+                    android:gravity="center"
                     >
             </EditText>
         </LinearLayout>
@@ -279,6 +284,7 @@
                     android:layout_marginLeft="58dip"
                     android:textColorHint="#000"
                     android:textColor="#000"
+                    android:hint="XXX-XXX-XXXX"
                     android:nextFocusDown="@+id/CellText"
                     android:background="@drawable/field"
                     android:maxLength="14"
@@ -301,6 +307,7 @@
                     android:layout_marginLeft="20dip"
                     android:textColorHint="#000"
                     android:textColor="#000"
+                    android:hint="XXX-XXX-XXXX"
                     android:nextFocusDown="@+id/OtherPhoneText"
                     android:background="@drawable/field"
                     android:maxLength="14"
@@ -323,6 +330,7 @@
                     android:layout_marginLeft="10dip"
                     android:textColorHint="#000"
                     android:textColor="#000"
+                    android:hint="XXX-XXX-XXXX"
                     android:nextFocusDown="@+id/EMailText"
                     android:background="@drawable/field"
                     android:maxLength="14"
@@ -439,6 +447,7 @@
             <Spinner
                     android:id="@+id/ContactMethodDropDownBox"
                     android:layout_height="wrap_content"
+                    android:paddingRight="30dp"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="10dip"
                     android:background="@drawable/spinner_button"
